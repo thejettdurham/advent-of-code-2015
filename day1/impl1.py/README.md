@@ -1,0 +1,1 @@
+My approach for this implmentation is simple.  Map the input characters to a numeric value and use this map to arithmetically sum the characters.  This sum will represent the floor that Santa ends up on.
