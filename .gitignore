@@ -1,1 +1,14 @@
+# OSX Files
+.DS_Store
+
+# Python artifacts
 *.pyc
+
+# Java artifacts
+.gradle/
+.settings/
+bin/
+build/
+.classpath
+.project
+
