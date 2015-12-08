@@ -1,9 +1,9 @@
 #!/usr/bin/python
 
+# Simple mapping of input character to numeric value
 charToValue = {'(': 1, ')': -1}
 
 def DestFloorForInstructions(input):
-    # Simple mapping of input character to numeric value
     floor = 0
 
     for c in input:
