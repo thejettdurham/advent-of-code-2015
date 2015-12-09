@@ -2,4 +2,5 @@ My solution for Day 3's problem is a little more intense.  My implementation can
 
 Gradle wrapper scripts are included, so running `./gradlew build` or `gradle.bat build` will build the source into `build/libs`
 
-Pass the path to the input file as the first argument to the Run class's main method.
+Once you build the project, run the solution with `./run.sh` with the following arguments
+- path to the input file

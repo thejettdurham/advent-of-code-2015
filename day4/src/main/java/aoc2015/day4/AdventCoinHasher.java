@@ -8,20 +8,19 @@ import org.apache.commons.codec.digest.DigestUtils;
 public class AdventCoinHasher {
 
 	public static String matchString = "00000";
-	
+
 	/**
 	 * 
-	 * @param key
+	 * @param Key
 	 * @param batchSize
 	 * @return
 	 */
 	public static int hashForKeyAndBatchSize(String key, int batchSize) {
-		
-		for (int i = 0; ; i += batchSize) {
+
+		for (int i = 0;; i += batchSize) {
 			OptionalInt match = IntStream.range(i, i + batchSize)
-					.filter(n ->  getHexHashForKeyAndNumber(key, n).startsWith(matchString))
-					.findFirst();
-			
+					.filter(n -> getHexHashForKeyAndNumber(key, n).startsWith(matchString)).findFirst();
+
 			if (match.isPresent()) {
 				return match.getAsInt();
 			} else {
@@ -29,15 +28,17 @@ public class AdventCoinHasher {
 			}
 		}
 	}
-	
+
 	/**
-	 * A simple wrapper around md5Hex provided by Apache Commons Codec. Only here for testing
-	 * @param key
+	 * A simple wrapper around md5Hex provided by Apache Commons Codec. Only
+	 * here for testing
+	 * 
+	 * @param Key
 	 * @param num
 	 * @return
 	 */
 	public static String getHexHashForKeyAndNumber(String key, int num) {
 		return DigestUtils.md5Hex(key + num);
 	}
-	
+
 }
