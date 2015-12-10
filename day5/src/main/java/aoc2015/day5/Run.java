@@ -11,7 +11,7 @@ public class Run {
 	 * @param args[0]
 	 *            the input file to feed to NiceFinder
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		String inputFilePath = args[0];
 		
 		System.out.println(String.format("Input contains %d nice strings according to the old rules", new NiceFinder().niceStringsInInput(new File(inputFilePath))));

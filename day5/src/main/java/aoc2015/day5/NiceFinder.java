@@ -112,7 +112,7 @@ public class NiceFinder {
 		return p.matcher(in).find();
 	}
 	
-	// Extracts each two-character substring from the input string and checks for repeats, short-circuiting if a match is found
+	// Extracts each two-character substring from the input string and checks the remainder for matches, short-circuiting if a match is found
 	private boolean containsTwoNonoverlappingPairSequences(String input) {
 		for (int i = 0; i < input.length() - 1; i++) {
 			String sub = input.substring(i, i+2);
