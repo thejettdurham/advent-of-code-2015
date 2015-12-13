@@ -13,7 +13,7 @@ public class Run {
 		int totalWrapping = 0;
 		int totalRibbon = 0;
 		
-		try (BufferedReader br = new BufferedReader(new FileReader(new File(inputFilePath)))) {
+		try (BufferedReader br = new BufferedReader(new FileReader(inputFilePath))) {
 			
 		    String line;
 		    while ((line = br.readLine()) != null) {
